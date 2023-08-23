@@ -163,39 +163,41 @@ nav li:hover {
 
 .produktoversigt {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .produkt {
+  display: grid;
+  flex-basis: 20%;
   background-color: #232323;
   border: 2px solid #fff;
   padding: 1rem;
 }
 
 .imgstr {
-  display: grid;
-  margin: 0 auto 0 auto;
-  background-size: cover;
-}
-
-.imgstr img:first-child {
   grid-row: 1;
   grid-column: 1;
 }
 
-.sale,
-.soldout {
+.sale {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(imgs/logo/SVG/sale.svg);
   place-self: center;
   grid-row: 1;
   grid-column: 1;
 }
 
-.begge {
-  margin: 0 auto 0 auto;
+.soldout {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(imgs/logo/SVG/soldout.svg);
+  place-self: center;
   grid-row: 1;
   grid-column: 1;
-  aspect-ratio: 1/1;
-  width: 80%;
 }
 
 /*PRODUKT

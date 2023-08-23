@@ -23,18 +23,21 @@
     <main>
         <h1>Produktoversigt</h1>
         <section class="produktoversigt">
-            <article class="produkt">
-                <img class="imgstr" src=" https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="bukser">
-                <h3>Tights</h3>
-                <p class="katsub">Nike | Tights</p>
-                <p>Pris: 200 kr.</p>
-                <p class="rabat">Rabat 38%</p>
-                <a href="produkt.html">Se mere</a>
-            </article>
+            <template>
+                <article class="produkt">
+                    <img class="imgstr" src=" https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="bukser">
+                    <div class="test"></div>
+                    <h3>Tights</h3>
+                    <p><span class="brand">Nike</span> | <span class="sub">Tights</span></p>
+                    <p>Pris: <span class="pris">200</span>,-</p>
+                    <p>Rabat <span class="rabat">0</span>%</p>
+                    <a href="produkt.html">Se mere</a>
+                </article>
+            </template>
             <article class="produkt">
                 <div class="imgstr">
                     <img src="https://kea-alt-del.dk/t7/images/webp/640/1572.webp" alt="bukser">
-                    <img class="sale" src="imgs/logo/SVG/sale.svg" alt="sale">
+
                 </div>
                 <h3>Flaske</h3>
                 <p>Den perfekte vandflaske til din træning</p>
@@ -44,7 +47,7 @@
             <article class="produkt">
                 <div class="imgstr">
                     <img src="https://kea-alt-del.dk/t7/images/webp/640/1571.webp" alt="sko">
-                    <img class="soldout" src="imgs/logo/SVG/soldout.svg" alt="soldout">
+
                 </div>
                 <h3>Puma trøje</h3>
                 <p>Den perfekte træningstrøje fra puma</p>
@@ -54,10 +57,7 @@
             <article class="produkt">
                 <div class="imgstr">
                     <img src="https://kea-alt-del.dk/t7/images/webp/640/1570.webp" alt="top">
-                    <div class="begge">
-                        <img src="imgs/logo/SVG/soldout.svg" alt="soldout">
-                        <img src="imgs/logo/SVG/sale.svg" alt="sale">
-                    </div>
+
                 </div>
                 <h3>Polo</h3>
                 <p>Polo fra Farrari perfekt til før og efter træning</p>
@@ -69,6 +69,7 @@
     <footer>
         <h2>Lavet af Nicolai</h2>
     </footer>
+    <script src="js/produktoversigt.js"></script>
 </body>
 
 </html>
