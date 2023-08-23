@@ -200,6 +200,16 @@ nav li:hover {
   grid-column: 1;
 }
 
+.begge {
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(imgs/logo/SVG/salesoldout.svg);
+  place-self: center;
+  grid-row: 1;
+  grid-column: 1;
+}
+
 /*PRODUKT
 ----------------*/
 

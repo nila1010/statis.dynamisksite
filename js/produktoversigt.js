@@ -1,4 +1,4 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+fetch("https://kea-alt-del.dk/t7/api/products?limit=50")
   .then((res) => res.json())
   .then((data) => showProducts(data));
 
@@ -18,11 +18,11 @@ function showProduct(product) {
   copy.querySelector(".rabat").textContent = product.discount;
   copy.querySelector(".imgstr").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
-  if (product.soldout) {
+  if (product.soldout && product.discount > 0) {
+    copy.querySelector(".test").classList.add("begge");
+  } else if (product.soldout) {
     copy.querySelector(".test").classList.add("soldout");
-  }
-
-  if (product.discount > 0) {
+  } else if (product.discount > 0) {
     copy.querySelector(".test").classList.add("sale");
   }
 
