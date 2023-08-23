@@ -25,20 +25,24 @@
         <article class="produktsite">
             <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="bukser">
             <div class="probeskrivelse">
-                <h2>Beskrivelse</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora autem voluptatem sequi
-                    voluptatibus
-                    repudiandae consequuntur, ipsa ex totam consectetur aliquam, porro corporis excepturi? Beatae,
-                    dolores
-                    explicabo eveniet fugit velit possimus.</p>
-                <h2>Pris</h2>
-                <p>200 kr.</p>
+                <form>
+                    <label>Størrelse
+                        <select name="størrelse">
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </label>
+                    <h2>Pris <span class="pris">200</span>,-</h2>
+                    <button type="submit">KURV</button>
+                </form>
             </div>
         </article>
     </main>
     <footer>
         <h2>Lavet af Nicolai</h2>
     </footer>
+    <script src="js/produkt.js"></script>
 </body>
 
 
