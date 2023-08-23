@@ -1,0 +1,223 @@
+/*GLOBAL
+-----------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url(imgs/baggrund.jpg);
+  background-size: cover;
+}
+
+main {
+  max-width: 1200px;
+  flex-grow: 1;
+  margin: 0 auto 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 3rem;
+  aspect-ratio: 1280/477;
+  width: 50%;
+}
+
+h1 {
+  margin-top: 7rem;
+  font-family: "cubano", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: "cubano", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-family: "cubano", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-family: "pt-sans", sans-serif;
+  color: #ffffff;
+  max-width: 65ch;
+}
+
+a {
+  font-family: "cubano", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/*HEADER
+-----------------*/
+header {
+  height: 10rem;
+}
+
+.header {
+  display: flex;
+  height: 20rem;
+  justify-content: space-between;
+}
+
+.header .logo {
+  width: 38%;
+}
+
+/*FOOTER
+-------------*/
+footer {
+  margin-top: 10rem;
+  background-color: #232323;
+}
+
+/*NAVIGATION
+------------------*/
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.nav li {
+  padding-top: 2rem;
+}
+
+.nav a {
+  font-size: 1.3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "cubano", sans-serif;
+  margin: 2rem 1rem 2rem 1rem;
+  font-size: 3rem;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+.active {
+  border-bottom: 2px solid #fff;
+}
+
+.navindex {
+  margin-top: 10rem;
+}
+
+.navindex a {
+  border: 2px solid #fff;
+  padding: 1rem;
+  background-color: #232323;
+}
+
+/*KATEOGRIER
+----------------*/
+
+.katoversigt {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.kategorier {
+  display: grid;
+  border: 2px solid #fff;
+  padding: 1rem;
+  background-color: #232323;
+}
+
+.kategorier a {
+  text-decoration: none;
+}
+
+.kategorier:hover {
+  transform: scale(1.1);
+}
+
+/*PRODUKTOVERSIGT
+--------------------*/
+
+.produktoversigt {
+  display: flex;
+  gap: 1rem;
+}
+
+.produkt {
+  background-color: #232323;
+  border: 2px solid #fff;
+  padding: 1rem;
+}
+
+.imgstr {
+  display: grid;
+  margin: 0 auto 0 auto;
+  background-size: cover;
+}
+
+.imgstr img:first-child {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.sale,
+.soldout {
+  place-self: center;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.begge {
+  margin: 0 auto 0 auto;
+  grid-row: 1;
+  grid-column: 1;
+  aspect-ratio: 1/1;
+  width: 80%;
+}
+
+/*PRODUKT
+----------------*/
+
+.produktsite {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.produktsite img:first-child {
+  aspect-ratio: 640/854;
+  width: 40%;
+}
+
+.probeskrivelse {
+  background-color: #232323;
+  border: 2px solid #fff;
+  padding: 1rem;
+}
+
+.probeskrivelse p:last-child {
+  text-align: center;
+}
