@@ -1,4 +1,7 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const kat = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + kat)
   .then((res) => res.json())
   .then((data) => showProducts(data));
 
@@ -11,6 +14,7 @@ function showProduct(product) {
 
   const copy = template.cloneNode(true);
 
+  document.querySelector("h1").textContent = product.category;
   copy.querySelector("h3").textContent = product.productdisplayname;
   copy.querySelector(".brand").textContent = product.brandname;
   copy.querySelector(".sub").textContent = product.subcategory;
