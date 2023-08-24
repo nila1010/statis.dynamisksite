@@ -232,9 +232,11 @@ nav li:hover {
 
 .probeskrivelse p:last-child {
   text-align: center;
+  margin-top: 1.5rem;
 }
 
 form {
+  margin-top: 3rem;
   font-family: "cubano", sans-serif;
   color: #ffffff;
   text-align: center;
@@ -248,6 +250,7 @@ select {
 }
 
 button {
+  margin-top: 2rem;
   font-family: "cubano", sans-serif;
   color: #ffffff;
   background-color: #232323;

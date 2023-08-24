@@ -1,4 +1,4 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=50")
+fetch("https://kea-alt-del.dk/t7/api/products")
   .then((res) => res.json())
   .then((data) => showProducts(data));
 
@@ -19,11 +19,20 @@ function showProduct(product) {
   copy.querySelector(".imgstr").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
   if (product.soldout && product.discount > 0) {
+    let rabat = (product.price -= product.discount);
+    copy.querySelector(".sparpris").textContent = rabat;
     copy.querySelector(".test").classList.add("begge");
   } else if (product.soldout) {
     copy.querySelector(".test").classList.add("soldout");
   } else if (product.discount > 0) {
+    let rabat = (product.price -= product.discount);
+    copy.querySelector(".sparpris").textContent = rabat;
     copy.querySelector(".test").classList.add("sale");
+  }
+
+  if (product.discount == null) {
+    copy.querySelector(".fjernrabat").style.display = "none";
+    copy.querySelector(".spar").style.display = "none";
   }
 
   document.querySelector("section").appendChild(copy);
