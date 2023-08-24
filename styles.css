@@ -138,7 +138,8 @@ nav li:hover {
 ----------------*/
 
 .katoversigt {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 2rem;
   margin-top: 4rem;
 }
