@@ -34,6 +34,7 @@ function showProduct(product) {
     copy.querySelector(".fjernrabat").style.display = "none";
     copy.querySelector(".spar").style.display = "none";
   }
+  copy.querySelector(".semere").setAttribute("href", `produkt.html?id=${product.id}`);
 
   document.querySelector("section").appendChild(copy);
 }
