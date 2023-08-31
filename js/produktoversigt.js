@@ -11,7 +11,6 @@ if (kat && brandname) {
     .then((res) => res.json())
     .then((data) => showProducts(data));
 } else {
-  /*  "https://kea-alt-del.dk/t7/api/products?category=" + kat} */
   fetch("https://kea-alt-del.dk/t7/api/products")
     .then((res) => res.json())
     .then((data) => showProducts(data));
