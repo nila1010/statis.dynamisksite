@@ -62,20 +62,3 @@ function showBrand(brand) {
   document.querySelector(".brands").appendChild(brandname);
 }
  */
-/*
-{
-  "id": 1528,
-  "gender": "Men",
-  "category": "Apparel",
-  "subcategory": "Topwear",
-  "articletype": "Jackets",
-  "season": "Fall",
-  "productionyear": 2010,
-  "usagetype": "Sports",
-  "productdisplayname": "Black Fleece Jacket",
-  "price": 3999,
-  "discount": 49,
-  "brandname": "Puma",
-  "soldout": 0
-}
-*/
