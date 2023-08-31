@@ -181,6 +181,9 @@ nav li:hover {
   background-color: #232323;
 }
 
+.sortbrands a:hover {
+  scale: 1.1;
+}
 .produktoversigt {
   display: flex;
   flex-wrap: wrap;
