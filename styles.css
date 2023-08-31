@@ -162,6 +162,25 @@ nav li:hover {
 /*PRODUKTOVERSIGT
 --------------------*/
 
+.brands {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.sortbrands {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.sortbrands a {
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 1rem;
+  background-color: #232323;
+}
+
 .produktoversigt {
   display: flex;
   flex-wrap: wrap;
@@ -211,12 +230,6 @@ nav li:hover {
   grid-column: 1;
 }
 
-.brands {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 /*PRODUKT
 ----------------*/
 
@@ -226,8 +239,8 @@ nav li:hover {
   justify-content: center;
 }
 
-.produktsite img:first-child {
-  aspect-ratio: 640/854;
+.produktsite img {
+  height: 100%;
   width: 40%;
 }
 

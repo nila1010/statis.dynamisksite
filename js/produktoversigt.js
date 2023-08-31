@@ -1,12 +1,18 @@
 const urlParams = new URLSearchParams(window.location.search);
 const kat = urlParams.get("category");
+const brandname = urlParams.get("brandname");
 
-if (kat == null) {
-  fetch("https://kea-alt-del.dk/t7/api/products")
+if (kat && brandname) {
+  fetch(`https://kea-alt-del.dk/t7/api/products?category=${kat}&brandname=${brandname}`)
+    .then((res) => res.json())
+    .then((data) => showProducts(data));
+} else if (kat) {
+  fetch("https://kea-alt-del.dk/t7/api/products?category=" + kat)
     .then((res) => res.json())
     .then((data) => showProducts(data));
 } else {
-  fetch("https://kea-alt-del.dk/t7/api/products?category=" + kat)
+  /*  "https://kea-alt-del.dk/t7/api/products?category=" + kat} */
+  fetch("https://kea-alt-del.dk/t7/api/products")
     .then((res) => res.json())
     .then((data) => showProducts(data));
 }
@@ -46,7 +52,7 @@ function showProduct(product) {
   document.querySelector(".produktoversigt").appendChild(copy);
 }
 
-/* fetch("https://kea-alt-del.dk/t7/api/brands")
+fetch("https://kea-alt-del.dk/t7/api/brands")
   .then((res) => res.json())
   .then(showBrands);
 
@@ -54,11 +60,14 @@ function showBrands(brands) {
   brands.forEach(showBrand);
 }
 
+const allowedBrands = ["Nike", "Puma", "ADIDAS"];
 function showBrand(brand) {
-  const tempbrand = document.querySelector(".tempbrand").content;
-  const brandname = tempbrand.cloneNode(true);
-  brandname.querySelector("h2").textContent = brand.brandname;
+  if (allowedBrands.includes(brand.brandname)) {
+    const tempbrand = document.querySelector(".tempbrand").content;
+    const brandname = tempbrand.cloneNode(true);
+    brandname.querySelector("a").textContent = brand.brandname;
+    brandname.querySelector("a").href = `produktoversigt.html?category=${kat}&brandname=${brand.brandname}`;
 
-  document.querySelector(".brands").appendChild(brandname);
+    document.querySelector(".sortbrands").appendChild(brandname);
+  }
 }
- */
