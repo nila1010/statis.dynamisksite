@@ -1,16 +1,22 @@
 const urlParams = new URLSearchParams(window.location.search);
 const kat = urlParams.get("category");
 
-fetch("https://kea-alt-del.dk/t7/api/products?category=" + kat)
-  .then((res) => res.json())
-  .then((data) => showProducts(data));
+if (kat == null) {
+  fetch("https://kea-alt-del.dk/t7/api/products")
+    .then((res) => res.json())
+    .then((data) => showProducts(data));
+} else {
+  fetch("https://kea-alt-del.dk/t7/api/products?category=" + kat)
+    .then((res) => res.json())
+    .then((data) => showProducts(data));
+}
 
 function showProducts(products) {
   products.forEach((product) => showProduct(product));
 }
 
 function showProduct(product) {
-  const template = document.querySelector("template").content;
+  const template = document.querySelector(".tempprodukt").content;
 
   const copy = template.cloneNode(true);
 
@@ -37,9 +43,25 @@ function showProduct(product) {
   }
   copy.querySelector(".semere").setAttribute("href", `produkt.html?id=${product.id}`);
 
-  document.querySelector("section").appendChild(copy);
+  document.querySelector(".produktoversigt").appendChild(copy);
 }
 
+/* fetch("https://kea-alt-del.dk/t7/api/brands")
+  .then((res) => res.json())
+  .then(showBrands);
+
+function showBrands(brands) {
+  brands.forEach(showBrand);
+}
+
+function showBrand(brand) {
+  const tempbrand = document.querySelector(".tempbrand").content;
+  const brandname = tempbrand.cloneNode(true);
+  brandname.querySelector("h2").textContent = brand.brandname;
+
+  document.querySelector(".brands").appendChild(brandname);
+}
+ */
 /*
 {
   "id": 1528,

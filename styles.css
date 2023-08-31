@@ -211,6 +211,12 @@ nav li:hover {
   grid-column: 1;
 }
 
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 /*PRODUKT
 ----------------*/
 
